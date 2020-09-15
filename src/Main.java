@@ -1,4 +1,4 @@
-import Polyminial.Polynomial;
+import Polynomial.Polynomial;
 import com.company.List;
 public class Main {
 
@@ -77,38 +77,3 @@ public class Main {
         return sum;
     }
 }
-/**
- * @version Самая первая версия функции Add(p,q,r), извините, еще не очень умею пользоватся GitHub
-
-if (q.size() == r.size()) {
-for (int i = 0; i < q.size(); i++) {
-if (q.get(i).getX() == r.get(i).getX()) {
-Polynomial elem = new Polynomial(0, 0);
-elem.setA(q.get(i).getA() + r.get(i).getA());
-elem.setX(q.get(i).getX());
-p.add(elem);
-} else {
-p.add(q.get(i));
-p.add(r.get(i));
-}
-}
-}
-else {
-int param = Math.min(q.size(), r.size());
-for (int i = 0; i < param; i++) {
-Polynomial elem = new Polynomial(0, 0);
-if (q.get(i).getX() == r.get(i).getX()) {
-elem.setA(q.get(i).getA() + r.get(i).getA());
-p.add(elem);
-} else {
-p.add(q.get(i));
-p.add(r.get(i));
-}
-}
-for(int i = param; i<Math.max(q.size(), r.size()); i++ )
-if(q.size()> r.size())
-p.add(q.get(i));
-else p.add(r.get(i));
-}
-
- */

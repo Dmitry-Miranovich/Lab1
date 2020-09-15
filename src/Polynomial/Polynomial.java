@@ -1,4 +1,4 @@
-package Polyminial;
+package Polynomial;
 public class Polynomial {
     private int x;
     private int a;
