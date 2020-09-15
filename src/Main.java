@@ -1,5 +1,5 @@
 import Polynomial.Polynomial;
-import com.company.List;
+import mainPackage.List;
 public class Main {
 
     public static void main(String[] args) {
@@ -22,7 +22,6 @@ public class Main {
     }
 
     public static void Add(List<Polynomial> p, List<Polynomial> q, List<Polynomial> r) {
-
         for(int i = 0; i<q.size(); i++){
             p.add(q.get(i));
         }
@@ -32,6 +31,7 @@ public class Main {
         Fix(p);
         BubbleSort(p);
     }
+    //Сортировка списка по степени
     static void BubbleSort(List<Polynomial> list) {
         for(int i = list.size()-1; i>0; i--)
         for (int j = 0; j < i; j++) {
@@ -42,13 +42,14 @@ public class Main {
             }
         }
     }
-    static void Fix(List<Polynomial> list){
-        for(int i = 0; i<list.size(); i++)
-            for(int j = 0; j<list.size(); j++){
-                if(j == i)
+    //Поиск всех элементов в списке с одинаковыми степенями с последующим их сложением
+    static void Fix(List<Polynomial> list) {
+        for (int i = 0; i < list.size(); i++)
+            for (int j = 0; j < list.size(); j++) {
+                if (j == i)
                     continue;
-                if(list.get(i).getX() == list.get(j).getX()){
-                    list.get(i).setA(list.get(i).getA()+list.get(j).getA());
+                if (list.get(i).getX() == list.get(j).getX()) {
+                    list.get(i).setA(list.get(i).getA() + list.get(j).getA());
                     list.get(i).setX(list.get(i).getX());
                     list.remove(j);
                 }
@@ -57,7 +58,7 @@ public class Main {
     public static boolean Equality(List<Polynomial> p, List<Polynomial> r) {
         if (p.size() == r.size()) {
             for (int i = 0; i < p.size(); i++) {
-                if(p.get(i).getA() != r.get(i).getA() && p.get(i).getX() !=r.get(i).getX()){
+                if (p.get(i).getA() != r.get(i).getA() && p.get(i).getX() != r.get(i).getX()) {
                     return false;
                 }
             }

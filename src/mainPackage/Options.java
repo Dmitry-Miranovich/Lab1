@@ -1,4 +1,4 @@
-package com.company;
+package mainPackage;
 
 public interface Options<E>{
    void add(E elem);

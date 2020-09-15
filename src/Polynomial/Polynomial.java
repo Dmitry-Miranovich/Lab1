@@ -6,7 +6,6 @@ public class Polynomial {
         this.x = x;
         this.a = a;
     }
-
     public int getX() {
         return x;
     }
@@ -26,7 +25,4 @@ public class Polynomial {
     public void ToString(){
         System.out.print(a + "x^" + x + " " );
     }
-
-
-
 }

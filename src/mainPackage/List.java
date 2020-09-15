@@ -1,11 +1,10 @@
-package com.company;
+package mainPackage;
 public class List<E> implements Options<E> {
     private Node<E> obj;
     private int size = 0;
    public List(){
         obj = new Node<>(null ,null);
     }
-
     @Override
     public void add(E elem) {
         Node<E> newElem = new Node<>(null ,elem);
@@ -21,7 +20,6 @@ public class List<E> implements Options<E> {
         }
         size++;
     }
-
     @Override
     public E get(int index) {
        if(index>=size || index<0 )
@@ -33,7 +31,6 @@ public class List<E> implements Options<E> {
        }
        return elem.getElem();
     }
-
     @Override
     public int size() {
         return size;
@@ -53,17 +50,14 @@ public class List<E> implements Options<E> {
        newElem.setNext(startElem.getNext().getNext());
        startElem.setNext(newElem);
     }
-
     @Override
     public boolean IsEmpty() {
         return size==0;
     }
-
     @Override
     public void clear() {
         obj.setNext(null);
     }
-
     @Override
     public void remove(int index) {
        if(size<=index || index<0){
@@ -76,7 +70,6 @@ public class List<E> implements Options<E> {
         object.setNext(object.getNext().getNext());
         size--;
     }
-
     protected static class Node<E> {
         private Node<E> next;
         private E elem;
