@@ -1,3 +1,5 @@
+package Objects;
+
 import static java.lang.Math.*;
 public class Person {
     private int number;

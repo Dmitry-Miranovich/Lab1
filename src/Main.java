@@ -1,4 +1,5 @@
-import Polynomial.Polynomial;
+import Objects.Person;
+import Objects.Polynomial;
 import mainPackage.List;
 public class Main {
 
